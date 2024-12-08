@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Predictor</title>
+</head>
+<body>
+    <h2>Loan Approval Predictor</h2>
+    <form action="/predict" method="POST">
+        <label>No of Dependents:</label><br>
+        <input type="number" name="no_of_dependents" required><br><br>
+
+        <label>Annual Income:</label><br>
+        <input type="number" name="income_annum" required><br><br>
+
+        <label>Loan Amount:</label><br>
+        <input type="number" name="loan_amount" required><br><br>
+
+        <label>Loan Term (Months):</label><br>
+        <input type="number" name="loan_term" required><br><br>
+
+        <label>Credit Score:</label><br>
+        <input type="number" name="credit_score" required><br><br>
+
+        <label>Residential Assets Value:</label><br>
+        <input type="number" name="residential_assets_value" required><br><br>
+
+        <label>Commercial Assets Value:</label><br>
+        <input type="number" name="commercial_assets_value" required><br><br>
+
+        <label>Luxury Assets Value:</label><br>
+        <input type="number" name="luxury_assets_value" required><br><br>
+
+        <label>Bank Asset Value:</label><br>
+        <input type="number" name="bank_asset_value" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    <br>
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
